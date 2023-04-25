@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Hubballi', cursive;
+}
+.first-page{
+  background-image: url("./starter-code/assets/home/background-home-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.top-header{
+  display: flex;
+  padding-top: 40px;
+  /* color: white; */
+  justify-content: space-between;
+}
+.header-logo{
+  padding-top:24px;
+  padding-left: 55px;
+}
+.line{
+  border-top: 1px solid white;
+  padding-left: 80px;
+  /* padding-right: 50px; */
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 450px;
+  
+}
+.header-list{
+  display: flex;
+  color:white;
+   font-size: 16px;
+  /* border:1px dotted white; */
+  width: 900px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  height: 100px;
+  overflow: hidden;
+  justify-content: space-around;
+  /* padding-right: 50px; */
+}
+
+.header-list a{
+  /* padding-right:50px; */
+  /* padding-left: 50px; */
+  font-size: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing:2.7px;
+  line-height: normal;
+  color:white;
+  text-decoration: none;
+  
+
+  
+}
+.header-list a:hover{
+  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid white;
+}
+
+.header-logo{
+
+}
+
+.middle-contents{
+  display: flex;
+  flex: 1;
+}
+.middle-left{
+  color:white;
+  font-weight: 400;
+  width: 50%;
+  /* max-width: 450px; */
+  padding:300px 0 130px 165px
+}
+.middle-left h2{
+  font-size: 28px;
+  letter-spacing:2.7px;
+  max-width: 400px;
+  font-family: 'Barlow Condensed', sans-serif;
+  
+}
+.middle-left h1{
+  font-family: 'Oswald', sans-serif;
+  font-size: 150px;
+  /* line-height: 171.9px; */
+  margin-top: -10px;
+  margin-bottom: 40px;
+  max-width: 400px;
+  letter-spacing: 10px;
+  font-weight: 500;
+} 
+.middle-left p{
+  font-size: 17.4px;
+  max-width: 400px; 
+  font-family: 'Barlow Condensed', sans-serif;
+  /* font-family: 'Hubballi', cursive; */
+  /* text-align:center; */
+  
+}/*making a button*/
+.middle-right{
+
+}
+.mid-rightpart{
+  display: flex;
+  /* justify-content: center; */
+  
+  padding-top:490px;
+  padding-left: 165px;
+  padding-bottom: 130px;
+  
+}
+.mid-rightpart button{
+  font-family: 'Oswald', sans-serif;
+  border-radius: 50%;
+  border: none;
+  /* padding: 100px; */
+  opacity: 1;
+  transition: 0.3s;
+  font-size: 32px;
+  width: 242px;
+  height: 242px;
+  letter-spacing:2px
+}
+
+.mid-rightpart button:hover{
+  opacity: 0.6;
+}
+
+.header-list-second{
+  display: none;
+  color:white;
+  font-size: 16px;
+  border:1px dotted white;
+  width: 900px;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  padding-right: 50px;
+  
+}
+
+/*-------------------->destination css desktop STARTS<--------------------*/
+/*-------------------->destination css desktop ENDS<--------------------*/
+/*----------------------->CREW css desktop Starts<------------------------*/
+/*-------------------->CREW css desktop ENDS<--------------------*/
+/* tablet startttttttttttttttttttttttttttttttttttttttttt*/
+
+@media (max-width: 768px) { 
+  .first-page{
+    background-image: url("./starter-code/assets/home/background-home-tablet.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .top-header{
+    padding-top:0%;
+    /* padding-left: 0px; */
+  }
+  .header-logo{
+    padding-left:40px
+  }
+  .header-list{
+    display:none;
+    /* padding-left: 55px;
+    padding-right: 30px;
+    max-width: 450px;
+    */
+  }
+ 
+  .header-list-second{
+    display:flex;
+    /* padding-left: 55px; */
+    padding-right: 0;
+    max-width: 430px;
+    border:none;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+  } 
+  .header-list-second a{
+    color:white;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-decoration: none;
+  }
+  .header-list-second a:hover{
+    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid white;
+  }
+  /* .header-list-second a.active{
+    border-bottom: 3px solid white;
+  } */
+  
+  .line{
+    display:none;
+  }
+  .middle-left{
+    /* padding:100px 159px 159px 0; */
+    width: auto;
+    padding-top: 100px;
+    padding-right: 159px;
+    padding-left: 159px;
+  }
+  .middle-contents{
+    display:block;
+  }
+  .middle-right{
+    width: auto;
+  }
+  .middle-left h2{
+    font-size: 20px;
+    max-width: 450px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .middle-left h1{
+    max-width: 450px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+  }
+  .middle-left p{
+    font-size: 16px;
+    max-width: 450px; 
+    text-align: center;
+  }
+  .middle-right{
+    /* width: auto;
+    padding-top: 100px;
+    padding-right:450px;
+    padding-bottom:200px */
+  }
+  .mid-rightpart{
+    padding-top:0px;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-left: 0;
+  }
+  .mid-rightpart button{
+  }
+  /*-------------------->destination css tablet STARTS<--------------------*/
+}
+
+@media (max-width: 375px) { 
+  .first-page{
+    background-image: url("./starter-code/assets/home/background-home-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .header-list-second{
+    display: none;
+  }
+}
