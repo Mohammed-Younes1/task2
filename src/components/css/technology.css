@@ -1,0 +1,301 @@
+.first-page-technology{
+    background-image: url("../../starter-code/assets/technology/background-technology-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.contents-technology{
+    color:white;
+    padding-bottom: 100px;
+}
+.contents-technology h2{
+    padding-top:60px;
+    padding-left: 130px;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 3.38px;
+    line-height: 24px;
+}
+.page-content-technology{
+    display: flex;
+    justify-content: space-between;
+}
+.slider-technology{
+    padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}  
+.slider-technology li{
+    display: flex;
+    color:white;
+    margin-left: 20px;
+    /* padding-left: 20px; */
+}  
+.li-slider{
+    font-size: 20px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    /* color:aliceblue; */
+    gap: 1px;
+}
+.li-slider a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: 'Bellefair';
+    font-weight: 400;
+    line-height: 37px;
+    text-decoration: none;
+    color:white;
+    width: 100px;
+    
+}
+.li-slider:hover{
+    background-color: white;
+}
+.li-slider a:hover{
+    color:black;
+}
+.slider-technology-active{
+    background:white;
+}
+.slider-technology-active a{
+    color:black;
+}
+
+
+.li-slider.slider-technology-active{
+    color:blue;
+}
+
+
+
+.left-technology{
+    font-weight: 400;
+    max-width: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: center;
+    /* width: 100%; */
+}  
+.left-technology h3{
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+    color:#D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-bottom: -25px;
+    font-weight: 400;
+}  
+.left-technology h1{
+    font-weight: 100;
+    font-size: 56px;
+    line-height: 64.18px;
+    font-family: 'Bellefair', serif;
+   
+}  
+.left-technology p{
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 32px;
+    color:#D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 4px;
+}  
+.right-technology{
+    display: flex;
+    
+}
+.right-technology img{
+    min-width: 360px;
+    width: 100%;
+    height: 560px;
+}
+.technology-smaller-pic{
+    display: none;
+}
+.first-page-technology em{
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 3.375px;
+    line-height: 24px;
+    opacity: 0.25;
+}
+
+ /*------------------------->technology css tablet Starts<------------------------*/
+ @media (max-width: 768px) and (min-width: 376px) {
+    .first-page-technology{
+        background-image: url("../../starter-code/assets/technology/background-technology-tablet.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .right-technology{
+        display: none;
+    }
+    .technology-smaller-pic{
+        display: flex;
+        /* height: 300px; */
+    }
+    .technology-smaller-pic img{
+        width: 100%;
+        height: 310px;
+        
+        padding-bottom: 50px;
+        min-height: 200px;
+        
+    }
+    .contents-technology{
+        padding-bottom: 0;
+    }
+    .contents-technology h2{
+        padding-top: 50;
+        padding-left: 13%;
+        padding-bottom: 10px;
+        font-size: 24px;
+        
+    }
+    .page-content-technology{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .slider-technology{
+        display: flex;
+        flex-direction: row;
+        gap:40px;
+        margin-left: 0;
+        padding: 0;
+        padding-bottom: 50px;
+    }
+    .slider-technology li{
+        margin-left:0
+    }
+    .li-slider{
+        width:60px;
+        height: 60px;
+    }
+    .li-slider a{
+        font-size: 24px;
+        line-height: 27.5px;
+        font-weight: 400;
+        letter-spacing: 1.5 px;
+        text-align: center;
+    }
+    .left-technology{
+        /* display: flex;
+        justify-content: center; */
+        max-width: 400px;
+        text-align: center;
+    }
+    .left-technology h3{
+        color:#D0D6F9;
+        margin-bottom: -10px;
+    }
+    .left-technology h1{
+        font-size: 40px;
+        line-height:45.84px;
+        
+    }
+    .left-technology p{
+        color:#D0D6F9;
+        margin-top: -10px;
+        padding-bottom: 100px;
+        font-size: 17px;
+    }
+
+}    
+ /*------------------------->technology css mobile Starts<------------------------*/
+ @media (max-width: 375px) { 
+    .first-page-technology{
+        background-image: url("../../starter-code/assets/technology/background-technology-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .right-technology{
+        display: none;
+    }
+    .technology-smaller-pic{
+        display: flex;
+    }
+    .technology-smaller-pic img{
+        width: 100%;
+        height: 181px;
+        padding-bottom: 30px;
+        min-height: 100px;
+    }
+    .contents-technology{
+        padding-bottom: 0;
+    }
+    .contents-technology h2{
+        padding-top: 0;
+        padding-left: 0%;
+        padding-bottom: 30px;
+        font-size: 16px;
+        display: flex;
+
+        letter-spacing: 3.38px;
+        line-height: 24px;
+        justify-content: center;
+        
+    }
+    .page-content-technology{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .slider-technology{
+        display: flex;
+        flex-direction: row;
+        gap:17px;
+        margin-left: 0;
+        padding: 0;
+        padding-bottom: 26px;
+    }
+    .slider-technology li{
+        margin-left:0
+    }
+    .li-slider{
+        width: 40px;
+        height: 40px;
+    }
+    .li-slider a{
+        font-size: 16px;
+        line-height: 18.34px;
+        font-weight: 400;
+    }
+    .left-technology{
+        /* display: flex;
+        justify-content: center; */
+        max-width: 400px;
+        text-align: center;
+    }
+    .left-technology h3{
+        font-size: 14px;
+        color:#D0D6F9;
+        margin-bottom: -10px;
+    }
+    .left-technology h1{
+        font-size: 24px;
+        line-height:45.84px;
+        
+    }
+    .left-technology p{
+        color:#D0D6F9;
+        margin-top: -10px;
+        padding-bottom: 100px;
+        font-size: 15px;
+    }
+ }  

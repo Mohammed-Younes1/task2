@@ -1,0 +1,98 @@
+import React, { useState, useEffect } from "react";
+import Imagelace from "./component/imagePlace";
+import Sliderbartech from "../navbar/lists/Sliderbartech";
+import MainMenu from "../navbar/MainMenu";
+import TechnologyData from "../data/TechnologyData";
+
+type Person = {
+    id: number;
+    imagef: string;
+    images: string;
+    tech: string;
+    info: string;
+  };
+  
+function TechnologyPage(){
+const[technologyinfo]=useState(TechnologyData);
+const [index, setIndex] = useState<number>(0);
+
+    useEffect(()=>{
+        const lastIndex= technologyinfo.length-1;
+        console.log(lastIndex);
+        if(index < 0){
+            setIndex(lastIndex);
+        }
+        if(index>lastIndex){
+            setIndex(0);
+        }
+    },[index, technologyinfo]);
+    
+    useEffect(() => {
+        let slider = setInterval(() => {
+          setIndex(index + 1);
+        }, 50000);
+        return () => {
+          clearInterval(slider);
+        };
+      }, [index]);
+
+    return (
+      <div className="first-page-technology"> 
+        {/* full page 1 */}
+        <MainMenu />
+       {/* First header part */}
+       
+       {technologyinfo.map((item,indexPeople)=>{
+          const{id, imagef,images,tech,info} = item;
+          let position="nextSlide";
+          if(indexPeople===index){
+            position="activeSlider"
+          }
+          if(indexPeople===-1 ||(index===0 && indexPeople===technologyinfo.length-1)){
+            position="lastSlider"
+          }
+          return(
+            <React.Fragment key={id}>
+              {index +1 === item.id && (
+                <div className="contents-technology"> 
+                <h2>03 SPACE LAUNCH 101</h2>
+                <div className="page-content-technology">
+                  {/* pic of tablet and mobile */}
+                    <div className="technology-smaller-pic">
+                      <img src={Imagelace.TechpicsmallA} alt="LAUNCH-VEHICLE-S"/>
+                    </div>
+                    {/* sider part */}
+                    <div className="slider-technology">
+                      <li className="li-slider "onClick={() => setIndex(index+1)}><a>1</a></li>
+                      <li className="li-slider "onClick={() => setIndex(index+1)}><a>2</a></li>
+                      <li className="li-slider "onClick={() => setIndex(index+1)}><a>3</a></li>
+                  </div>
+                    
+                    {/* <Sliderbartech /> */}
+                    {/* text part */}
+                    <div className="left-technology">
+                      <h3>THE TERMINOLOGY…</h3>
+                      <h1>LAUNCH VEHICLE</h1>
+                      <p>A launch vehicle or carrier rocket is a rocket-propelled
+                        vehicle used to carry a payload from Earth's surface
+                        to space, usually to Earth orbit or beyond.
+                        Our WEB-X carrier rocket is the most powerful
+                        in operation. Standing 150 metres tall,it's quite
+                        an awe-inspiring sight on the launch pad!</p>
+                        </div>
+                    {/* image part     */}
+                    <div className="right-technology">
+                      <img src={Imagelace.TechpicfullA} alt="LAUNCH-VEHICLE"/>
+                    </div>
+                    </div>
+                </div>
+              )}
+            </React.Fragment>
+          );
+        })} {/*map return*/}
+
+       
+     </div>
+    )
+}
+export default TechnologyPage;

@@ -1,0 +1,82 @@
+import React, { useState, useEffect } from "react";
+import Imagelace from "./component/imagePlace";
+import CrewsList from "../navbar/lists/CrewsList";
+import MainMenu from "../navbar/MainMenu";
+import CrewData from "../data/CrewData";
+
+type Person = {
+  id: number;
+  image: string;
+  name: string;
+  role: string;
+  info: string;
+};
+
+function Crewpage() {
+  const [crewinfo] = useState(CrewData);
+  const [index, setIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const lastIndex = crewinfo.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, crewinfo]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+
+  return (
+    <div className="first-page-crew">
+      {/* full page 1 */}
+      <MainMenu />
+      {/* First header part */}
+      <div className="middle-contents-crew">
+        {crewinfo.map((item, indexPeople) => {
+          const { id, image, name, role, info } = item;
+          let position = "nextSlide";
+          if(indexPeople===index){
+            position="activeSlider"
+          }
+          if(indexPeople===index-1 || (index ===0 && indexPeople=== crewinfo.length-1)){
+            position="lastSlider"
+          }
+          return (
+            <div className={position} key={id}>
+              <div className="middle-left-crew">
+                <h2>02 MEET YOUR CREW</h2>
+                <div className="middle-left-text-crew">
+                    <h3>{role}</h3>
+                    <h1>{name}</h1>
+                    <p>{info}</p>
+                    <CrewsList />
+                </div>
+              </div>
+
+              <div className="middle-right-crew">
+                <img src={image} alt="person-img" />
+              </div>
+            </div>
+          );
+
+        })} {/*map return*/}
+        {/* <div className="div-fix">
+          <h2>02 MEET YOUR CREW</h2>
+        </div> */}
+
+      
+      </div>
+    </div>
+  );
+}
+
+export default Crewpage;
