@@ -41,7 +41,7 @@ function MainMenu() {
           }}
           className={activeUrl.includes("crew") ? "active" : ""}
         >
-          02 Crew
+          02 Crews
         </div>
         <div
           onClick={() => {
