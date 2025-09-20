@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { useLocation, Outlet } from "react-router-dom";
 import "./App.css";
 import "./components/css/crew.css";
@@ -11,7 +11,7 @@ function App() {
   const selectedBackground = useMemo(() => {
     let classname;
 
-    if (location.pathname === "/home") {
+    if (location.pathname === "/" || location.pathname === "/") {
       classname = "first-page";
     } else if (location.pathname === "/destination") {
       classname = "first-page-destination";

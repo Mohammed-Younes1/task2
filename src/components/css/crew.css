@@ -233,6 +233,7 @@
     background-image: url("../../starter-code/assets/crew/background-crew-mobile.jpg");
     background-position: center;
     background-size: cover;
+    min-height: 100vh; 
   }
   .middle-contents-crew{
     display: flex;

@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "../../App";
 import Crewpage from "../pages/crewPage";
@@ -11,7 +10,6 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/Home" element={<HomePage />} />
           <Route path="/Destination" element={<DestinationPage />} />
           <Route path="/crew" element={<Crewpage />} />
           <Route path="technology" element={<TechnologyPage />} />
