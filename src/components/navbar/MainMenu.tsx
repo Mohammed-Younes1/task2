@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Logoplace from "../pages/component/logoPlace";
 import NavMenu from "./lists/NavMenu";
@@ -19,11 +19,11 @@ function MainMenu() {
       </div>
       <div className="line"></div>
       <div className="header-list-destination">
-        <div 
+        <div
           onClick={() => {
-            navigate("home");
+            navigate("/");
           }}
-          className={activeUrl.includes("home") ? "active" : ""}
+          className={activeUrl === "/" ? "active" : ""}
         >
           00 Home{" "}
         </div>
@@ -53,15 +53,11 @@ function MainMenu() {
         </div>
       </div>
       <div className="header-list-second-destination">
-        {/* <a href="home" className={activeUrl.includes("home")? "active" : ""}>Home</a>
-           <a href="destination" className={activeUrl.includes("destination")? "active" : ""}>Destination</a>
-           <a href="crew" className={activeUrl.includes("crew")? "active" : ""}>Crew</a>
-           <a href="technology"className={activeUrl.includes("technology")? "active" : ""}>Technology</a> */}
         <div
           onClick={() => {
-            navigate("home");
+            navigate("/");
           }}
-          className={activeUrl.includes("home") ? "active" : ""}
+          className={activeUrl === "/" ? "active" : ""}
         >
           Home{" "}
         </div>
@@ -90,8 +86,6 @@ function MainMenu() {
           Technology
         </div>
       </div>
-      {/* {activeUrl +"ASD"} */}
-
       <NavMenu />
     </div>
   );

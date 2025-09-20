@@ -2,6 +2,7 @@
     background-image: url("../../starter-code/assets/technology/background-technology-desktop.jpg");
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
 }
 .contents-technology{
     color:white;
